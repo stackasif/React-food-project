@@ -10,6 +10,8 @@ import FastFood from '../Components/FastFood'
 import ChefSection from './ChefSection'
 import OpenTime from '../Components/OpenTime'
 import ContactSection from '../Components/ContactSection'
+import Footer from './Footer'
+import foodItems from '../items/foodItems'
 
 
 
@@ -29,8 +31,18 @@ function Home() {
       </div>
        <About/>
 
-      <div className="w-full max-w-[1280px] mx-auto">
-        <Menu/>
+      <div className="w-full max-w-[1280px] mx-auto flex flex-wrap gap-5 py-8">
+        {foodItems.map((item) => (
+          <Menu
+            key={item.id}
+            name={item.food_name}
+            image={item.food_image}
+            category={item.food_category}
+            type={item.food_type}
+            price={item.price}
+            id={item.id}
+          />
+        ))}
       </div>
 
       <Offer />
@@ -40,6 +52,7 @@ function Home() {
       <OpenTime/>
 
       <ContactSection />
+      <Footer/>
     </div>
   )
 }
