@@ -1,8 +1,9 @@
 import { useState } from "react";
+
 import { IoCloseSharp } from "react-icons/io5";
 import { LuMenu } from "react-icons/lu";
-import { FaSearch } from "react-icons/fa";
-
+import { MdDinnerDining } from "react-icons/md";
+import { FaShoppingCart, FaSearch } from "react-icons/fa";
 
 const navItems = [
   "Home",
@@ -15,105 +16,334 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState("Home");
+
+  const handleNavClick = (item) => {
+    setActiveItem(item);
+    setIsMenuOpen(false);
+  };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-orange-100 bg-white/95 shadow-sm backdrop-blur-md">
-      <nav className="mx-auto flex h-[108px] max-w-7xl items-center justify-between px-5 lg:px-8">
-        
-        {/* Logo */}
-        <a href="#" className="flex items-center gap-3">
-          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-red-500 to-orange-400 text-2xl text-white shadow-lg shadow-orange-200">
-            🍴
-          </div>
-
-          <div>
-            <h1 className="font-serif text-3xl font-bold leading-none text-[#17202a]">
-              Foodzy
-            </h1>
-            <p className="mt-1 text-[11px] font-medium tracking-[4px] text-gray-400">
-              FAST FOOD & RESTAURANT
-            </p>
-          </div>
-        </a>
-
-        {/* Desktop Navigation */}
-        <div className="hidden items-center gap-8 lg:flex">
-          {navItems.map((item, index) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className={`relative py-10 text-[17px] font-medium transition-colors ${
-                index === 0 ? "text-[#171717]"  : "text-[#171717] hover:text-red-600"}`}>
-              {item}
-
-              {/* Active underline */}
-              {index === 0 && (
-                <span className="absolute bottom-0 left-0 h-[4px] w-full rounded-t-full bg-red-500" />
-              )}
-            </a>
-          ))}
-        </div>
-
-        {/* Desktop Right Actions */}
-        <div className="hidden items-center gap-6 lg:flex">
-          {/* Search */}
-          <button
-            type="button"
-            aria-label="Search"
-            className="text-gray-700 transition hover:text-red-600"
-          >
-            <FaSearch />
-
-          </button>
-
-          {/* Order Button */}
-          <button className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-red-600 to-red-500 px-6 py-4 font-semibold text-white shadow-lg shadow-red-200 ">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth="2"
+    <>
+      {/* ================= HEADER ================= */}
+      <header className="sticky top-0 z-40 w-full border-b border-orange-100 bg-white/95 shadow-sm backdrop-blur-md">
+        <nav
+          className="
+            mx-auto flex
+            h-[80px] md:h-[100px]
+            max-w-[1280px]
+            items-center justify-between
+            gap-3
+            px-3 md:px-5 lg:px-8
+          "
+        >
+          {/* ================= LOGO ================= */}
+          <div className="flex items-center gap-2 shrink-0">
+            <div
+              className="
+                flex items-center justify-center
+                w-9 h-9
+                md:w-12 md:h-12
+                rounded-full
+                shadow-lg
+                bg-gradient-to-br from-[#ED481C] to-[#F58A20]
+                text-white
+              "
             >
-              <path d="M6 8h12l1 12H5L6 8Z" />
-              <path d="M9 8V6a3 3 0 0 1 6 0v2" />
-            </svg>
-            Order Now
-          </button>
-        </div>
+              <MdDinnerDining className="text-[16px] md:text-2xl" />
+            </div>
 
-        {/* Mobile Menu Button */}
-        <button type="button" onClick={() => setIsOpen(!isOpen)} className="rounded-md p-2 text-gray-700 hover:bg-gray-100 lg:hidden" aria-label="Toggle menu">
-          {isOpen ? <IoCloseSharp /> : <LuMenu />}
-        </button>
-      </nav>
+            <h1 className="text-[14px] md:text-[20px] font-extrabold">
+              Food<span className="text-red-600">ZY</span>
+            </h1>
+          </div>
 
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="border-t border-gray-100 bg-white px-5 py-5 shadow-lg lg:hidden">
-          <div className="flex flex-col">
-            {navItems.map((item, index) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                onClick={() => setIsOpen(false)}
-                className={`border-b border-gray-100 px-2 py-3 text-base font-medium ${
-                  index === 0 ? "text-red-600" : "text-gray-700"
-                }`}
+          {/* ================= SEARCH ================= */}
+          <form
+            action=""
+            className="
+              flex items-center justify-between
+              w-full
+              max-w-[700px]
+              h-[40px] md:h-[60px]
+              gap-3
+              px-2 md:px-5
+              rounded-full
+              border-2 border-orange-100
+              bg-white
+              shadow-[0_4px_20px_rgba(249,115,22,0.12)]
+              transition-all
+              focus-within:border-orange-300
+              focus-within:shadow-[0_4px_25px_rgba(249,115,22,0.2)]
+            "
+          >
+            <input
+              type="text"
+              placeholder="search items...."
+              className="
+                w-full
+                outline-none
+                text-[12px] md:text-[16px]
+                bg-transparent
+              "
+            />
+
+            <button
+              type="submit"
+              className="
+                shrink-0
+                w-6 h-6
+                md:w-8 md:h-8
+                rounded-full
+                shadow-lg
+                bg-gradient-to-br from-[#ED481C] to-[#F58A20]
+                flex justify-center items-center
+                text-white
+              "
+            >
+              <FaSearch className="w-[10px] h-[10px] md:w-[12px] md:h-[12px]" />
+            </button>
+          </form>
+
+          {/* ================= RIGHT SIDE ================= */}
+          <div className="flex items-center gap-2 shrink-0">
+            {/* Cart */}
+            <button
+              type="button"
+              className="
+                relative
+                w-9 h-9
+                md:w-12 md:h-12
+                rounded-full
+                shadow-lg
+                bg-gradient-to-br from-[#ED481C] to-[#F58A20]
+                flex justify-center items-center
+                text-white
+              "
+            >
+              <FaShoppingCart className="text-[16px] md:text-xl" />
+
+              <span
+                className="
+                  absolute
+                  -top-1 -right-1
+                  min-w-[18px] h-[18px]
+                  px-1
+                  rounded-full
+                  bg-red-600
+                  text-white
+                  text-[10px]
+                  flex items-center justify-center
+                  font-semibold
+                "
               >
-                {item}
-              </a>
-            ))}
+                0
+              </span>
+            </button>
 
-            <button className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-red-600 px-5 py-3 font-semibold text-white">
-              <span>🛍️</span>
-              Order Now
+            {/* ================= HAMBURGER ================= */}
+            <button
+              type="button"
+              onClick={() => setIsMenuOpen(true)}
+              aria-label="Open navigation menu"
+              className="
+                flex items-center justify-center
+                w-9 h-9
+                md:w-12 md:h-12
+                rounded-full
+                text-gray-800
+                hover:bg-orange-50
+                transition-all duration-300
+              "
+            >
+              <LuMenu className="text-[26px] md:text-[32px]" />
             </button>
           </div>
+        </nav>
+      </header>
+
+      {/* =====================================================
+                            OVERLAY
+      ====================================================== */}
+
+      <div
+        onClick={() => setIsMenuOpen(false)}
+        className={`
+          fixed inset-0 z-[50]
+          bg-black/20
+          backdrop-blur-sm
+          transition-all duration-300
+
+          ${
+            isMenuOpen
+              ? "opacity-100 visible"
+              : "opacity-0 invisible pointer-events-none"
+          }
+        `}
+      />
+
+      {/* =====================================================
+                         GLASS NAV MENU
+      ====================================================== */}
+
+      <aside
+        className={`
+          fixed
+          z-[60]
+
+          /* Desktop */
+          top-6 right-6 bottom-6
+          w-[420px]
+
+          /* Mobile */
+          max-sm:top-3
+          max-sm:right-3
+          max-sm:bottom-3
+          max-sm:w-[calc(100%-24px)]
+
+          rounded-[28px]
+
+          /* Background */
+          bg-[#fffaf4]/75
+
+          /* Glass effect */
+          backdrop-blur-2xl
+          border border-white/80
+
+          shadow-[0_25px_80px_rgba(0,0,0,0.18)]
+
+          transition-all
+          duration-500
+          ease-[cubic-bezier(0.22,1,0.36,1)]
+
+          ${
+            isMenuOpen
+              ? "translate-x-0 opacity-100"
+              : "translate-x-[110%] opacity-0 pointer-events-none"
+          }
+        `}
+      >
+        <div className="relative flex h-full flex-col px-8 md:px-10 py-7 md:py-9">
+
+          {/* ================= CLOSE ================= */}
+          <div className="flex justify-end">
+            <button
+              type="button"
+              onClick={() => setIsMenuOpen(false)}
+              aria-label="Close navigation menu"
+              className="
+                flex items-center justify-center
+                w-11 h-11
+                rounded-full
+                text-gray-800
+                hover:bg-black/5
+                hover:rotate-90
+                transition-all duration-300
+              "
+            >
+              <IoCloseSharp className="text-[32px]" />
+            </button>
+          </div>
+
+          {/* ================= NAV ITEMS ================= */}
+          <nav
+            className="
+              flex flex-1
+              flex-col
+              items-center
+              justify-center
+              gap-6
+              md:gap-7
+            "
+          >
+            {navItems.map((item) => {
+              const isActive = activeItem === item;
+
+              return (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  onClick={() => handleNavClick(item)}
+                  className={`
+                    relative
+                    text-[19px] md:text-[21px]
+                    font-medium
+                    transition-all duration-300
+
+                    ${
+                      isActive
+                        ? "text-red-500"
+                        : "text-gray-800 hover:text-red-500"
+                    }
+                  `}
+                >
+                  {item}
+
+                  {/* Active underline */}
+                  <span
+                    className={`
+                      absolute
+                      left-1/2
+                      -translate-x-1/2
+                      -bottom-2
+
+                      h-[2px]
+                      rounded-full
+                      bg-red-500
+
+                      transition-all duration-300
+
+                      ${
+                        isActive
+                          ? "w-10 opacity-100"
+                          : "w-0 opacity-0"
+                      }
+                    `}
+                  />
+                </a>
+              );
+            })}
+          </nav>
+
+          {/* ================= FOOTER ================= */}
+          <div className="pb-2 md:pb-3">
+            <div className="w-full h-px bg-black/10 mb-5 md:mb-6" />
+
+            <div
+              className="
+                flex
+                justify-center
+                items-center
+                gap-5 md:gap-7
+                text-xs md:text-sm
+                text-gray-500
+              "
+            >
+              <a
+                href="#"
+                className="hover:text-black transition-colors"
+              >
+                Instagram
+              </a>
+
+              <a
+                href="#"
+                className="hover:text-black transition-colors"
+              >
+                Facebook
+              </a>
+
+              <a
+                href="#"
+                className="hover:text-black transition-colors"
+              >
+                YouTube
+              </a>
+            </div>
+          </div>
         </div>
-      )}
-    </header>
+      </aside>
+    </>
   );
 }

@@ -31,7 +31,7 @@ function Home() {
       </div>
        <About/>
 
-      <div className="w-full max-w-[1280px] mx-auto flex flex-wrap gap-5 py-8">
+      <div className="w-full max-w-[1280px] mx-auto flex flex-wrap items-center justify-center gap-5 py-8">
         {foodItems.map((item) => (
           <Menu
             key={item.id}
