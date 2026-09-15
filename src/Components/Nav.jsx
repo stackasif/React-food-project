@@ -51,10 +51,10 @@ export default function Navbar() {
                 text-white
               "
             >
-              <MdDinnerDining className="text-[16px] md:text-2xl" />
+              <MdDinnerDining className="text-[16px] md:text-2xl cursor-pointer" />
             </div>
 
-            <h1 className="text-[14px] md:text-[20px] font-extrabold">
+            <h1 className="text-[14px] md:text-[20px] cursor-pointer font-extrabold">
               Food<span className="text-red-600">ZY</span>
             </h1>
           </div>
@@ -115,6 +115,7 @@ export default function Navbar() {
                 relative
                 w-9 h-9
                 md:w-12 md:h-12
+                cursor-pointer
                 rounded-full
                 shadow-lg
                 bg-gradient-to-br from-[#ED481C] to-[#F58A20]
@@ -122,7 +123,7 @@ export default function Navbar() {
                 text-white
               "
             >
-              <FaShoppingCart className="text-[16px] md:text-xl" />
+              <FaShoppingCart className="text-[16px] md:text-xl " />
 
               <span
                 className="
@@ -148,6 +149,7 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(true)}
               aria-label="Open navigation menu"
               className="
+                cursor-pointer
                 flex items-center justify-center
                 w-9 h-9
                 md:w-12 md:h-12

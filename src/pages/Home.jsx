@@ -37,6 +37,7 @@ function Home() {
             key={item.id}
             name={item.food_name}
             image={item.food_image}
+            description={item.food_description}
             category={item.food_category}
             type={item.food_type}
             price={item.price}

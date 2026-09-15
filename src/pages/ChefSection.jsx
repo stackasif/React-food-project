@@ -1,28 +1,28 @@
 const chefs = [
   {
-    name: "Alice Mortal",
+    name: "Hifzur Rahman",
     role: "HEAD CHEF",
     experience: "12 years experience",
-    image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1574966740637-12c84035a4f2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    name: "Michael Corn",
-    role: "GRILL MASTER",
-    experience: "8 years experience",
-    image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    name: "Faz Chowdel",
+    name: "Sarfraz Ansari",
     role: "PASTRY CHEF",
     experience: "10 years experience",
-    image: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?q=80&w=1087&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    name: "William Latnum",
+    name: "Faiz Ansari",
     role: "PIZZA ARTISAN",
     experience: "9 years experience",
-    image: "https://images.unsplash.com/photo-1574969903809-3f7d4f2e6f3d?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1562514155-444b9a967dfa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
+  {
+    name: "Dinesh lal",
+    role: "GRILL MASTER",
+    experience: "8 years experience",
+    image: "https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  }
 ];
 
 export default function ChefSection() {

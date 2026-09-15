@@ -1,46 +1,48 @@
+import all from '../assets/all-img.png'
 import burger from '../assets/burger.webp'
-import dessert from '../assets/dessert.webp'
+import breakfast from '../assets/breakfast.avif'
 import friedchik from '../assets/fried-chik.webp'
 import pizza from '../assets/pizza.webp'
-import wrapfood from '../assets/wrap-food.webp'
+import soups from '../assets/soups.avif'
 
  const category=[
     {
         id:1,
         name:'All Items',
         items:101 ,
-        images: burger
+        images: all
     },
      {
         id:2,
+        name:'Breakfast',
+        items:20,
+        images: breakfast
+    },
+     {
+        id:3,
         name:'Burgers',
         items:24,
         images: burger
     },
      {
-        id:3,
+        id:4,
         name:'Pizza',
         items:18 ,
         images: pizza
     },
      {
-        id:4,
+        id:5,
         name:'Fried chicken',
         items:15,
         images: friedchik
     },
      {
-        id:5,
-        name:'Wraps',
-        items:12,
-        images: wrapfood
-    },
-     {
         id:6,
-        name:'Desserts',
-        items:20,
-        images: dessert
-    }
+        name:'Soups',
+        items:12,
+        images: soups
+    },
+    
 ]
 
 export default category;

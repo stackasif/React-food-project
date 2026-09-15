@@ -133,7 +133,7 @@ export default function Offer() {
               {/* Burger image */}
               <div className="overflow-hidden bg-black shadow-2xl">
                 <img
-                  src="/hero-burger.jpg"
+                  src="/offer.png"
                   alt="Signature burger with loaded fries"
                   className="h-auto w-full object-cover"
                 />
