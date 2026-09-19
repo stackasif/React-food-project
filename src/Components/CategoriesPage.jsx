@@ -21,12 +21,12 @@ function CategoriesPage() {
       </div>
 
 
-      <div className=" bg-[#fffaf4] flex flex-wrap items-center justify-center gap-4 px-6 py-8">
+      <div className=" bg-[#fffaf4] flex flex-wrap items-center justify-center gap-3 md:gap-4 px-2 md:px-6 py-4 md:py-8">
         {category.map((item, index) => (
           <div
             key={item.id}
             className={`py-4 flex flex-col justify-center items-center rounded-2xl bg-white
-              w-48 h-48 overflow-hidden cursor-pointer
+              w-25 h-25 md:w-48 md:h-48 overflow-hidden cursor-pointer
               shadow-lg transition-all duration-200
               border-2
               ${index === 0
@@ -34,7 +34,7 @@ function CategoriesPage() {
                 : 'border-transparent hover:border-red-300'
               }`}
           >
-            <div className="w-24 h-24 rounded-full overflow-hidden">
+            <div className="w-12 h-12 md:w-24 md:h-24 rounded-full overflow-hidden shrink-0">
               <img
                 src={item.images}
                 alt={item.name}
@@ -42,11 +42,11 @@ function CategoriesPage() {
               />
             </div>
 
-            <h1 className="font-semibold mt-3 text-base">
+            <h1 className="font-semibold mt-1 md:mt-3 text-[12px] md:text-base">
               {item.name}
             </h1>
 
-            <p className="text-gray-400 text-sm mt-1">
+            <p className="text-gray-400 text-[9px] md:text-sm md:mt-1">
               {item.items} Items
             </p>
           </div>
