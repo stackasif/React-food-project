@@ -45,7 +45,7 @@ function Home() {
       )}
 
       
-      <div className="w-full max-w-[1280px] mx-auto flex flex-wrap items-center justify-center gap-5 py-3">
+      <div className=" w-full max-w-[1280px] mx-auto flex flex-wrap items-center justify-center gap-5 py-3 " id="menu">
         {cate.map((item) => (
           <Menu
             key={item.id}
