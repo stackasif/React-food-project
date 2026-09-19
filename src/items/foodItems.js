@@ -10,7 +10,6 @@ import image9 from '../../src/assets/images/img9.avif';
 import image10 from '../../src/assets/images/img10.avif';
 import image11 from '../../src/assets/images/img11.avif';
 import image12 from '../../src/assets/images/img12.avif';
-// import healthy-homemade from '../src/assets/images/cheese-omelet.avif';
 import image13 from '../../src/assets/images/img13.avif';
 import image14 from '../../src/assets/images/img14.avif';
 import image15 from '../../src/assets/images/img15.avif';
@@ -23,9 +22,6 @@ import image21 from '../../src/assets/images/img21.avif';
 import image22 from '../../src/assets/images/img22.avif';
 import image23 from '../../src/assets/images/img23.avif';
 import image24 from '../../src/assets/images/img24.avif';
-// import image25 from '../src/assets/images/veggie-Burger.avif';
-
-
 
 const foodItems = [
 
@@ -65,7 +61,7 @@ const foodItems = [
     {
         "id": 4,
         "food_name": "Spaghetti Carbonara",
-        "food_category": "pasta",
+        "food_category": "Pasta",
         "food_type": "Non Veg",
         "food_quantity": 1,
         "food_image": image4,
@@ -291,18 +287,7 @@ const foodItems = [
         "food_image": image24,
         "price": 799,
         "food_description": "Sweet and savory pizza topped with juicy pineapple, ham, melted cheese, and tomato sauce."
-    },
-
-    // {
-    //     "id": 25,
-    //     "food_name": "Pasta Primavera",
-    //     "food_category": "Pasta",
-    //     "food_type": "Veg",
-    //     "food_quantity": 1,
-    //     "food_image": image25,
-    //     "price": 899,
-    //     "food_description": "Fresh pasta tossed with colorful seasonal vegetables in a light and flavorful sauce."
-    // }
+    }
 
 ];
 

@@ -20,7 +20,7 @@ import soups from '../assets/soups.avif'
     },
      {
         id:3,
-        name:'Burgers',
+        name:'Burger',
         items:24,
         images: burger
     },
@@ -32,13 +32,13 @@ import soups from '../assets/soups.avif'
     },
      {
         id:5,
-        name:'Fried chicken',
+        name:'Main',
         items:15,
         images: friedchik
     },
      {
         id:6,
-        name:'Soups',
+        name:'Soup',
         items:12,
         images: soups
     },

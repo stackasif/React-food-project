@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { IoCloseSharp } from "react-icons/io5";
 import { LuMenu } from "react-icons/lu";
 import { MdDinnerDining } from "react-icons/md";
 import { FaShoppingCart, FaSearch } from "react-icons/fa";
+import { dataContext } from "../context/UserContext";
+import foodItems from "../items/foodItems";
 
 const navItems = [
   "Home",
@@ -19,6 +21,12 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState("Home");
 
+  let {input,setInput,setCate}=useContext(dataContext)
+  useEffect(()=>{
+   let newList= foodItems.filter((item)=>item.food_name.includes(input) || item.food_name.toLocaleLowerCase().includes(input))
+   setCate(newList)
+  },[input])
+
   const handleNavClick = (item) => {
     setActiveItem(item);
     setIsMenuOpen(false);
@@ -27,7 +35,7 @@ export default function Navbar() {
   return (
     <>
       {/* ================= HEADER ================= */}
-      <header className="sticky top-0 z-40 w-full border-b border-orange-100 bg-white/95 shadow-sm backdrop-blur-md">
+      <header className="sticky top-0 z-40 w-full border-b border-orange-100 bg-white/95 shadow-sm backdrop-blur-md" >
         <nav
           className="
             mx-auto flex
@@ -77,6 +85,7 @@ export default function Navbar() {
               focus-within:border-orange-300
               focus-within:shadow-[0_4px_25px_rgba(249,115,22,0.2)]
             "
+            onSubmit={(e)=>e.preventDefault()}
           >
             <input
               type="text"
@@ -87,6 +96,8 @@ export default function Navbar() {
                 text-[12px] md:text-[16px]
                 bg-transparent
               "
+              onChange={(e)=>setInput(e.target.value)}
+              value={input}
             />
 
             <button

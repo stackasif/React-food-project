@@ -1,8 +1,10 @@
-import React from 'react'
+
+import React, { useContext } from 'react'
 import Nav from '../Components/Nav'
 import Hero from '../Components/Hero'
 import Marquee from '../Components/Marquee'
 import CategoriesPage from '../Components/CategoriesPage'
+import Category2 from '../Components/Category2'
 import About from './About'
 import Menu from './Menu'
 import Offer from '../Components/Offer'
@@ -11,28 +13,40 @@ import ChefSection from './ChefSection'
 import OpenTime from '../Components/OpenTime'
 import ContactSection from '../Components/ContactSection'
 import Footer from './Footer'
-import foodItems from '../items/foodItems'
-
-
+import { dataContext } from '../context/UserContext'
 
 function Home() {
+  const { cate, input } = useContext(dataContext)
+
   return (
     <div className="min-h-screen bg-[#fffaf4]">
-        <Nav />
+      <Nav />
+
+      {!input && (
+        <>
+          <main className="w-full max-w-[1280px] mx-auto">
+            <Hero />
+          </main>
+
+          <Marquee />
+
+          <div className="w-full max-w-[1280px] mx-auto">
+            <CategoriesPage />
+          </div>
+
+          <About />
+
+          <div className="w-full max-w-[1280px] mx-auto gap-5 py-8">
+            <div className="flex flex-col justify-center items-center text-center py-10">
+              <Category2 />
+            </div>
+          </div>
+        </>
+      )}
+
       
-      <main className="w-full max-w-[1280px] mx-auto">
-        <Hero />
-      </main>
-
-      <Marquee />
-
-      <div className="w-full max-w-[1280px] mx-auto">
-        <CategoriesPage />
-      </div>
-       <About/>
-
-      <div className="w-full max-w-[1280px] mx-auto flex flex-wrap items-center justify-center gap-5 py-8">
-        {foodItems.map((item) => (
+      <div className="w-full max-w-[1280px] mx-auto flex flex-wrap items-center justify-center gap-5 py-3">
+        {cate.map((item) => (
           <Menu
             key={item.id}
             name={item.food_name}
@@ -48,12 +62,10 @@ function Home() {
 
       <Offer />
       <FastFood />
-      <ChefSection/>
-      
-      <OpenTime/>
-
+      <ChefSection />
+      <OpenTime />
       <ContactSection />
-      <Footer/>
+      <Footer />
     </div>
   )
 }

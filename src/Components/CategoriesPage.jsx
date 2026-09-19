@@ -1,7 +1,10 @@
+import { useContext } from 'react'
 import category from '../items/category.js'
+import { dataContext } from '../context/UserContext.jsx'
 
 
 function CategoriesPage() {
+    
   return (
     <div>
       <div className='flex flex-col justify-center items-center text-center py-10'>

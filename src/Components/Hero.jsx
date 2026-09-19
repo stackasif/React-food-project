@@ -7,7 +7,7 @@ import { FaGripfire } from "react-icons/fa";
 
 function Hero() {
   return (
-    <section className="min-h-screen bg-[#fffaf4] px-6 py-10">
+    <section className="min-h-screen bg-[#fffaf4] px-6 py-10 scroll-mt-[100px]" id="home">
 
       {/* Main container */}
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 lg:flex-row">
@@ -16,8 +16,8 @@ function Hero() {
         <div className="w-full lg:w-1/2">
 
           {/* Small badge */}
-          <div className="mb-6 flex items-center gap-1.5 rounded-full bg-white px-4 py-3 shadow-md w-[65%]">
-            <IoIosStar className="text-amber-500"/>#1 Rated Fast Food Restaurant in New York
+          <div className="mb-6 flex items-center gap-1.5 rounded-full bg-white px-4 py-3 shadow-md w-[320px] md:w-[360px] text-[14px] md:text-[16px]">
+            <IoIosStar className="text-amber-500 text-[16px]"/>#1 Rated Fast Food Restaurant in New York
           </div>
 
           {/* Heading */}
@@ -146,7 +146,7 @@ function Hero() {
 
 
           {/* Delivery */}
-          <div className="absolute flex items-center gap-2  right-0 top-1/2 rounded-xl bg-white px-5 py-4 shadow-lg">
+          <div className="absolute flex items-center gap-2  right-0 top-1/2.5 rounded-xl bg-white px-5 py-4 shadow-lg ">
           <IoIosTimer className="text-[20px] text-blue-500 "/>
             <div>
               <p className="font-bold">
@@ -161,7 +161,7 @@ function Hero() {
 
 
           {/* Rating */}
-          <div className="absolute bottom-5 right-5 flex items-center gap-2.5 rounded-xl bg-white px-5 py-4 shadow-lg">
+          <div className="absolute bottom-0 right-5 flex items-center gap-2.5 rounded-xl bg-white px-5 py-4 shadow-lg">
             <IoIosStar className="text-[20px] text-yellow-500" />
            <div>
              <p className="font-bold">
