@@ -47,60 +47,60 @@ const foodItems = [
         "food_description": "Warm and comforting chicken soup made with tender chicken and flavorful herbs."
     },
 
-    {
-        "id": 3,
-        "food_name": "Minestrone Soup",
-        "food_category": "Soup",
-        "food_type": "Veg",
-        "food_quantity": 1,
-        "food_image": image3,
-        "price": 349,
-        "food_description": "Hearty Italian vegetable soup packed with fresh vegetables, herbs, and pasta."
-    },
+    // {
+    //     "id": 3,
+    //     "food_name": "Minestrone Soup",
+    //     "food_category": "Soup",
+    //     "food_type": "Veg",
+    //     "food_quantity": 1,
+    //     "food_image": image3,
+    //     "price": 349,
+    //     "food_description": "Hearty Italian vegetable soup packed with fresh vegetables, herbs, and pasta."
+    // },
 
-    {
-        "id": 4,
-        "food_name": "Spaghetti Carbonara",
-        "food_category": "Pasta",
-        "food_type": "Non Veg",
-        "food_quantity": 1,
-        "food_image": image4,
-        "price": 999,
-        "food_description": "Classic spaghetti tossed in a creamy egg and cheese sauce with savory bacon."
-    },
+    // {
+    //     "id": 4,
+    //     "food_name": "Spaghetti Carbonara",
+    //     "food_category": "Pasta",
+    //     "food_type": "Non Veg",
+    //     "food_quantity": 1,
+    //     "food_image": image4,
+    //     "price": 999,
+    //     "food_description": "Classic spaghetti tossed in a creamy egg and cheese sauce with savory bacon."
+    // },
 
-    {
-        "id": 5,
-        "food_name": "Veg Alfredo Pasta",
-        "food_category": "Pasta",
-        "food_type": "Veg",
-        "food_quantity": 1,
-        "food_image": image5,
-        "price": 899,
-        "food_description": "Creamy Alfredo pasta tossed with fresh vegetables and rich Parmesan sauce."
-    },
+    // {
+    //     "id": 5,
+    //     "food_name": "Veg Alfredo Pasta",
+    //     "food_category": "Pasta",
+    //     "food_type": "Veg",
+    //     "food_quantity": 1,
+    //     "food_image": image5,
+    //     "price": 899,
+    //     "food_description": "Creamy Alfredo pasta tossed with fresh vegetables and rich Parmesan sauce."
+    // },
 
-    {
-        "id": 6,
-        "food_name": "Chicken Alfredo Pasta",
-        "food_category": "Pasta",
-        "food_type": "Non Veg",
-        "food_quantity": 1,
-        "food_image": image6,
-        "price": 1099,
-        "food_description": "Creamy Alfredo pasta served with tender chicken and a rich Parmesan sauce."
-    },
+    // {
+    //     "id": 6,
+    //     "food_name": "Chicken Alfredo Pasta",
+    //     "food_category": "Pasta",
+    //     "food_type": "Non Veg",
+    //     "food_quantity": 1,
+    //     "food_image": image6,
+    //     "price": 1099,
+    //     "food_description": "Creamy Alfredo pasta served with tender chicken and a rich Parmesan sauce."
+    // },
 
-    {
-        "id": 7,
-        "food_name": "Paneer Butter Masala",
-        "food_category": "Main",
-        "food_type": "Veg",
-        "food_quantity": 1,
-        "food_image": image7,
-        "price": 799,
-        "food_description": "Soft paneer cooked in a rich, creamy tomato and butter-based Indian gravy."
-    },
+    // {
+    //     "id": 7,
+    //     "food_name": "Paneer Butter Masala",
+    //     "food_category": "Main",
+    //     "food_type": "Veg",
+    //     "food_quantity": 1,
+    //     "food_image": image7,
+    //     "price": 799,
+    //     "food_description": "Soft paneer cooked in a rich, creamy tomato and butter-based Indian gravy."
+    // },
 
     {
         "id": 8,
@@ -212,16 +212,16 @@ const foodItems = [
         "food_description": "Fluffy eggs folded with melted cheese and seasoned with aromatic herbs."
     },
 
-    {
-        "id": 18,
-        "food_name": "Fettuccine Alfredo",
-        "food_category": "Pasta",
-        "food_type": "Veg",
-        "food_quantity": 1,
-        "food_image": image18,
-        "price": 949,
-        "food_description": "Silky fettuccine pasta coated in a creamy Alfredo sauce with Parmesan cheese."
-    },
+    // {
+    //     "id": 18,
+    //     "food_name": "Fettuccine Alfredo",
+    //     "food_category": "Pasta",
+    //     "food_type": "Veg",
+    //     "food_quantity": 1,
+    //     "food_image": image18,
+    //     "price": 949,
+    //     "food_description": "Silky fettuccine pasta coated in a creamy Alfredo sauce with Parmesan cheese."
+    // },
 
     {
         "id": 19,
@@ -245,16 +245,16 @@ const foodItems = [
         "food_description": "Crispy golden battered fish served with crunchy fries and a flavorful dipping sauce."
     },
 
-    {
-        "id": 21,
-        "food_name": "Hash Browns",
-        "food_category": "Breakfast",
-        "food_type": "Veg",
-        "food_quantity": 1,
-        "food_image": image21,
-        "price": 249,
-        "food_description": "Golden and crispy shredded potatoes cooked to perfection for a delicious breakfast side."
-    },
+    // {
+    //     "id": 21,
+    //     "food_name": "Hash Browns",
+    //     "food_category": "Breakfast",
+    //     "food_type": "Veg",
+    //     "food_quantity": 1,
+    //     "food_image": image21,
+    //     "price": 249,
+    //     "food_description": "Golden and crispy shredded potatoes cooked to perfection for a delicious breakfast side."
+    // },
 
     {
         "id": 22,
@@ -267,16 +267,16 @@ const foodItems = [
         "food_description": "Light and flavorful soup filled with fresh seasonal vegetables and aromatic herbs."
     },
 
-    {
-        "id": 23,
-        "food_name": "Egg Fried Rice",
-        "food_category": "Main",
-        "food_type": "Non Veg",
-        "food_quantity": 1,
-        "food_image": image23,
-        "price": 599,
-        "food_description": "Fragrant rice stir-fried with scrambled eggs, vegetables, and savory Asian seasonings."
-    },
+    // {
+    //     "id": 23,
+    //     "food_name": "Egg Fried Rice",
+    //     "food_category": "Main",
+    //     "food_type": "Non Veg",
+    //     "food_quantity": 1,
+    //     "food_image": image23,
+    //     "price": 599,
+    //     "food_description": "Fragrant rice stir-fried with scrambled eggs, vegetables, and savory Asian seasonings."
+    // },
 
     {
         "id": 24,
