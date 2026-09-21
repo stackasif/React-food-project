@@ -14,6 +14,7 @@ import OpenTime from '../Components/OpenTime'
 import ContactSection from '../Components/ContactSection'
 import Footer from './Footer'
 import { dataContext } from '../context/UserContext'
+import CartSection from '../Components/CartSection'
 
 function Home() {
   const { cate, input } = useContext(dataContext)
@@ -21,7 +22,7 @@ function Home() {
   return (
     <div className="min-h-screen bg-[#fffaf4]">
       <Nav />
-
+      
       {!input && (
         <>
           <main className="w-full max-w-[1280px] mx-auto">
@@ -61,6 +62,9 @@ function Home() {
       </div>
 
       <Offer />
+
+     
+
       <FastFood />
       <ChefSection />
       <OpenTime />

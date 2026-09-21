@@ -27,10 +27,7 @@ function Category2() {
         {category.map((item) => (
           <div
             key={item.id}
-            onClick={() => {
-        setActiveCategory(item.id);
-        filter(item.name);
-    }}
+            onClick={() => { setActiveCategory(item.id); filter(item.name); }}
            
             className={`flex flex-col border-2 border-gray-800 justify-center items-center rounded-2xl m-1 px-3 py-1 cursor-pointer
               overflow-hidden shadow-lg transition-all duration-300 

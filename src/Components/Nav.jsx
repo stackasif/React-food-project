@@ -6,6 +6,7 @@ import { MdDinnerDining } from "react-icons/md";
 import { FaShoppingCart, FaSearch } from "react-icons/fa";
 import { dataContext } from "../context/UserContext";
 import foodItems from "../items/foodItems";
+import CartSection from "./CartSection";
 
 const navItems = [
   "Home",
@@ -21,7 +22,8 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState("Home");
 
-  let {input,setInput,setCate}=useContext(dataContext)
+  let {input,setInput,setCate,showCart,setShowCart}=useContext(dataContext)
+  
   useEffect(()=>{
    let newList= foodItems.filter((item)=>item.food_name.includes(input) || item.food_name.toLocaleLowerCase().includes(input))
    setCate(newList)
@@ -118,9 +120,10 @@ export default function Navbar() {
           </form>
 
           {/* ================= RIGHT SIDE ================= */}
-          <div className="flex items-center gap-2 shrink-0">
+          <div className="flex items-center gap-2 shrink-0" >
             {/* Cart */}
             <button
+
               type="button"
               className="
                 relative
@@ -133,6 +136,8 @@ export default function Navbar() {
                 flex justify-center items-center
                 text-white
               "
+
+              onClick={()=>setShowCart(true)}
             >
               <FaShoppingCart className="text-[16px] md:text-xl " />
 
@@ -173,8 +178,12 @@ export default function Navbar() {
               <LuMenu className="text-[26px] md:text-[32px]" />
             </button>
           </div>
+
+          
         </nav>
+       
       </header>
+       <CartSection/>
 
       {/* =====================================================
                             OVERLAY

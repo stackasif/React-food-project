@@ -5,6 +5,8 @@ export const dataContext=createContext()
 function UserContext({children}) {
     let [cate,setCate]=useState(foodItems)
     let [input,setInput]=useState("")
+    let [showCart,setShowCart]=useState(false)
+
 
      function filter(category) {
       if (category==="All Items") {
@@ -20,6 +22,8 @@ function UserContext({children}) {
         setCate,
         input,
         setInput,
+        showCart,
+        setShowCart,
         filter
     }
   return (
